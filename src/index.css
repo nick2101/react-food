@@ -1,13 +1,113 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input[type="search"] {
+    -webkit-appearance: none;
+}
+
+header nav {
+    padding: 0 1rem;
+}
+
+
+.content {
+    min-height: calc(100vh - 226px - 64px);
+    width: 80%;
+    margin: auto;
+}
+
+
+.breadcrumbs {
+    background-color: inherit;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    white-space: nowrap;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+}
+
+.breadcrumbs::-webkit-scrollbar {
+    display: none;
+}
+
+.breadcrumb {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumb:before {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumb:last-child {
+    pointer-events: none;
+    color: #000;
+}
+
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
+.card-content a {
+    color: #000000;
+}
+
+.card-title {
+    font-weight: bold !important;
+}
+
+
+.meal {
+    display: flex;
+    margin: auto;
+}
+
+.meal-img {
+    max-width: 50%;
+}
+
+.meal-description {
+    padding-left: 2rem;
+}
+
+.meal-youtube iframe {
+    height: 350px;
+    width: 600px;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .meal {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .meal-img {
+        max-width: 100%;
+    }
+
+    .meal-description {
+        padding-left: 0;
+    }
 }
