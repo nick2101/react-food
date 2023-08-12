@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import {Header} from "./components/Header";
 import {HomePage} from "./pages/HomePage";
 import {CategoryPage} from "./pages/CategoryPage";
@@ -11,14 +11,14 @@ function App() {
     <>
       <Header/>
       <div className="content">
-        <BrowserRouter basename="/react-food/">
+        <HashRouter>
           <Routes>
             <Route exact path="/" element={<HomePage/>}/>
             <Route path="/category/:name" element={<CategoryPage/>}/>
             <Route path="/meal/:id" element={<MealPage/>}/>
             <Route path="*" element={<NotFound/>}/>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </div>
       <Footer/>
     </>
